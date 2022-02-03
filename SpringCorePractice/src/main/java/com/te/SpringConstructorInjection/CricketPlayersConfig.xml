@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean class="com.te.SpringConstructorInjection.Country" name="country">
+        <constructor-arg value="India"></constructor-arg>
+        <constructor-arg value="Rahul Dravid"></constructor-arg>
+    
+    </bean>
+    <bean class="com.te.SpringConstructorInjection.CricketPlayers" name="countryPlayers">
+                 <constructor-arg value="18"></constructor-arg>
+                 <constructor-arg value="Virat Kohli"></constructor-arg>
+                 <constructor-arg value="17000"></constructor-arg>
+                 <constructor-arg ref="country"></constructor-arg>
+    
+    </bean>    
+    </beans>
